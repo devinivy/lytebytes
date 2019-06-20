@@ -1,0 +1,17 @@
+{
+  "name": "lytebytes",
+  "version": "1.0.0",
+  "description": "Mmmmm... lytebytes",
+  "main": "lib/index.js",
+  "bin": {
+    "lytebytes": "./bin/lytebytes"
+  },
+  "author": "Devin Ivy <devin@bigroomstudios.com>",
+  "license": "WTFPL",
+  "dependencies": {
+    "bossy": "^4.0.3",
+    "chalk": "^2.4.2",
+    "gifwrap": "^0.7.5",
+    "jimp": "^0.6.4"
+  }
+}

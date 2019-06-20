@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+'use strict';
+
+const Lightbytes = require('..');
+const DisplayError = require('../lib/display-error');
+
+(async () => {
+
+    try {
+
+        await Lightbytes.cli({
+            argv: process.argv,
+            env: process.env,
+            in: process.stdin,
+            out: process.stdout,
+            err: process.stderr,
+            cwd: process.cwd()
+        });
+
+        process.exit(0)
+    }
+    catch (err) {
+
+        if (err instanceof DisplayError) {
+            console.error(err.message);
+        }
+        else {
+            console.error(err.stack);
+        }
+
+        process.exit(1);
+    }
+})();
